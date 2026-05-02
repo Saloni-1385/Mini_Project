@@ -1,29 +1,57 @@
 import React from 'react';
 
-// Health + Life Insurance ke liye tumhare logo paths
-const partnersData = [
-  // Health Insurance
-  { name: "ADITYA BIRLA HEALTH", logo: "/logo/logo1.jpeg" },
-  { name: "Care Health",         logo: "/logo/logo2.jpeg" },
-  { name: "Manipal Cigna",       logo: "/logo/logo3.jpeg" },
-  { name: "STAR Health",         logo: "/logo/logo4.jpeg" },
-  { name: "Niva Bupa",           logo: "/logo/logo5.jpeg" },
-
-  // Life Insurance
-  { name: "HDFC Life",           logo: "/logo/logo6.jpeg" },
-  { name: "ICICI PRUDENTIAL",    logo: "/logo/logo7.jpeg" },
-  { name: "SBI Life",            logo: "/logo/logo8.jpeg" },
-  { name: "LIC",                 logo: "/logo/logo9.jpeg" },
-  { name: "BAJAJ Allianz Life",  logo: "/logo/logo10.jpeg" },
-  { name: "Bandhan Life",        logo: "/logo/logo11.jpeg" },
-  { name: "Digit Life",          logo: "/logo/logo12.jpeg" },
-  { name: "FUTURE GENERALI LIFE",logo: "/logo/logo13.jpeg" },
-  { name: "IndiaFirst",          logo: "/logo/logo14.jpeg" },
-  { name: "Kotak Life",          logo: "/logo/logo16.jpeg" },
-  { name: "Pramerica",           logo: "/logo/logo17.jpeg" },
-  { name: "Shriram Life",        logo: "/logo/logo18.jpeg" },
-  { name: "Star Union Dai-ichi", logo: "/logo/logo19.jpeg" },
-  { name: "TATA AIA",            logo: "/logo/logo20.jpeg" }
+const logos = [
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.09 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.10 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.10 PM (2).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.10 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.11 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.11 PM (2).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.11 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.12 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.12 PM (2).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.12 PM (3).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.12 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.13 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.13 PM (2).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.13 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.14 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.14 PM (2).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.14 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.15 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.15 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.16 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.16 PM (2).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.16 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.17 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.17 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.18 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.18 PM (2).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.18 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.19 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.19 PM (2).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.19 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.20 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.20 PM (2).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.20 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.21 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.21 PM (2).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.21 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.22 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.22 PM (2).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.22 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.23 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.23 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.24 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.24 PM (2).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.24 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.25 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.25 PM (2).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.25 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.26 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.26 PM.jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.27 PM (1).jpeg",
+  "/logo/WhatsApp Image 2026-05-02 at 1.38.27 PM.jpeg",
 ];
 
 const Partners = () => {
@@ -51,30 +79,26 @@ const Partners = () => {
 
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
-        gap: '20px',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
+        gap: '16px',
         width: '100%',
         maxWidth: '1200px',
-        justifyContent: 'center'
       }}>
-        {partnersData.map((partner, index) => (
+        {logos.map((logo, index) => (
           <div
             key={index}
             style={{
               background: '#ffffff',
               borderRadius: '12px',
-              padding: '24px 12px',
+              padding: '16px',
               display: 'flex',
-              flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              textAlign: 'center',
               boxShadow: '0 4px 15px rgba(0,0,0,0.04)',
               border: '1px solid #f1f5f9',
               transition: 'all 0.3s',
               cursor: 'pointer',
-              minHeight: '110px',
-              gap: '12px'
+              minHeight: '80px',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-4px)';
@@ -86,29 +110,14 @@ const Partners = () => {
             }}
           >
             <img
-              src={partner.logo}
-              alt={`${partner.name} Logo`}
+              src={logo}
+              alt={`Partner ${index + 1}`}
               style={{
-                width: '40px',
-                height: '40px',
-                borderRadius: '50%',
+                width: '70px',
+                height: '70px',
                 objectFit: 'contain',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
               }}
             />
-            <span style={{
-              fontSize: '11px',
-              fontWeight: 800,
-              color: '#334155',
-              letterSpacing: '0.2px',
-              lineHeight: '1.4',
-              width: '100%',
-              wordWrap: 'break-word',
-              overflowWrap: 'break-word',
-              hyphens: 'auto'
-            }}>
-              {partner.name}
-            </span>
           </div>
         ))}
       </div>
